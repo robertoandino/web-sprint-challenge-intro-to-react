@@ -111,7 +111,7 @@ Inside `frontend/components/App.js`, and **on first render only**, fetch the dat
 
 Here's the tricky thing: each character fetched using Endpoint A has a "homeworld" property, but the value of this property is not the name of the planet but its ID instead. This means you must use the data obtained from Endpoint B to obtain the missing piece of information about each character: the name of their home world.
 
-For fetching, you can optionally use `Promise.all` to handle the requests. We do not need the data from request A in order to _start_ request B, so the requests can happen concurrently instead of back-to-back. **This will make the app feel faster** to the user!
+For fetching, you can optionally use `Promise.all` to handle thee requests. We do not need the data from request A in order to _start_ request B, so the requests can happen concurrently instead of back-to-back. **This will make the app feel faster** to the user!
 
 Once you have the responses from Endpoints A and B stored inside variables, check that they match what you saw in Postman, and then **use your JavaScript skills to combine the two lists into a single data structure** that is comfortable to work with. There may be some array methods that can help with this...Ideally, it would look something like this:
 
